@@ -7,15 +7,15 @@ def deal_card
 end
 
 def display_card_total(num)
-  p "Your cards add up to #{num.to_s}"
-  return num
+  puts "Your cards add up to #{num.to_s}"
+  $card_total = num
 end
 
-def $prompt_user
+def prompt_user
  puts "Type 'h' to hit or 's' to stay"
 end
 
-def $get_user_input
+def get_user_input
   user_input = gets.chomp
 end
 
@@ -27,11 +27,11 @@ def initial_round
   display_card_total(deal_card + deal_card)
 end
 
-def hit?(num)
- $prompt_user
- $get_user_input
+def hit?($card_total)
+ prompt_user
+ get_user_input
   if user_input == 'h'
-   display_card_total(num + deal_card)
+   display_card_total($card_total + deal_card)
   elsif user_input == 's'
     display_card_total(num)
   else 
