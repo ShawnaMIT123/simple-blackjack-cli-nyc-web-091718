@@ -7,7 +7,7 @@ def deal_card
 end
 
 def display_card_total(num)
-  puts "Your cards add up to #{num.to_s}"
+  p "Your cards add up to #{num.to_s}"
   return num
 end
 
