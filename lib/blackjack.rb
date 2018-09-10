@@ -8,7 +8,6 @@ end
 
 def display_card_total(num)
   puts "Your cards add up to #{num}".
-  return num
 end
 
 def prompt_user
@@ -24,8 +23,7 @@ def end_game(card_total)
 end
 
 def initial_round
-  sum = deal_card + deal_card
-  display_card_total(sum)
+  display_card_total(deal_card + deal_card)
 end
 
 def hit?(num)
