@@ -31,9 +31,9 @@ def hit?($card_total)
  prompt_user
  get_user_input
   if user_input == 'h'
-    $card_total = $card_total + deal_card
+    return $card_total = $card_total + deal_card
   elsif user_input == 's'
-    $card_total
+    return $card_total
   else 
     invalid_command
     prompt_user
