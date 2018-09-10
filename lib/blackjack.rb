@@ -8,7 +8,7 @@ end
 
 def display_card_total(num)
   puts "Your cards add up to #{num}."
-  num
+  return num
 end
 
 def prompt_user
@@ -31,8 +31,9 @@ def hit?(num)
  prompt_user
  get_user_input
  if user_input == 'h'
-   deal_card
+   display_card_total(num)
   elsif user_input == 's'
+    display_card_total(num)
   else 
     invalid_command
   end
