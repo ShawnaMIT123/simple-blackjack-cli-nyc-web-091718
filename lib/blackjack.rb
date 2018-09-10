@@ -11,11 +11,11 @@ def display_card_total(num)
   return num
 end
 
-def prompt_user
+def $prompt_user
  puts "Type 'h' to hit or 's' to stay"
 end
 
-def get_user_input
+def $get_user_input
   user_input = gets.chomp
 end
 
@@ -28,8 +28,8 @@ def initial_round
 end
 
 def hit?(num)
- prompt_user
- get_user_input
+ $prompt_user
+ $get_user_input
   if user_input == 'h'
    display_card_total(num + deal_card)
   elsif user_input == 's'
