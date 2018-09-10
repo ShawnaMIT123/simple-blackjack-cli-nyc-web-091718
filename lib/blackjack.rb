@@ -19,8 +19,8 @@ def get_user_input
   user_input = gets.chomp
 end
 
-def end_game(card_total)
-  puts "Sorry, you hit #{card_total}. Thanks for playing!"
+def end_game($card_total)
+  puts "Sorry, you hit #{$card_total}. Thanks for playing!"
 end
 
 def initial_round
@@ -31,11 +31,12 @@ def hit?($card_total)
  prompt_user
  get_user_input
   if user_input == 'h'
-   display_card_total($card_total + deal_card)
+    $card_total = $card_total + deal_card
   elsif user_input == 's'
-    display_card_total($card_total)
+    $card_total
   else 
     invalid_command
+    prompt_user
   end
 end
 
