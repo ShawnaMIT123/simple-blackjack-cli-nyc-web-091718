@@ -41,7 +41,7 @@ def hit?(num)
 end
 
 def invalid_command
-  # code invalid_command here
+  puts "Please enter a valid command"
 end
 
 #####################################################
@@ -49,6 +49,9 @@ end
 #####################################################
 
 def runner
-  # code runner here
+  Welcome
+  initial_round
+  hit?
+  
 end
     
